@@ -1,0 +1,15 @@
+endpoint: wss://rpc.composable.finance
+mock-signature-host: true
+block: ${env.COMPOSABLE_BLOCK_NUMBER}
+db: ./composable.db.sqlite
+
+import-storage:
+  Sudo:
+    Key: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY # Alice
+  System:
+    Account:
+      -
+        -
+          - "5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY"
+        - data:
+            free: "1000000000000000000"
