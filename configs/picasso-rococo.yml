@@ -1,0 +1,16 @@
+endpoint: wss://picasso-rococo-rpc-lb.composablenodes.tech
+mock-signature-host: true
+block: ${env.COMPOSABLE_BLOCK_NUMBER}
+db: ./db.sqlite
+# wasm-override: acala-2101.wasm
+
+import-storage:
+  Sudo:
+    Key: 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY # Alice
+  System:
+    Account:
+      -
+        -
+          - 5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY
+        - data:
+            free: "10000000000000000"
